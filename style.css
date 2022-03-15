@@ -1,0 +1,124 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 62.5%;
+  min-height: 100vh;
+  font-weight: 500;
+  background: #ecf2f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+main {
+  width: 80%;
+  display: grid;
+  gap: 2rem;
+}
+
+.card {
+  border-radius: 0.7rem;
+  -webkit-border-radius: 0.7rem;
+  -moz-border-radius: 0.7rem;
+  -ms-border-radius: 0.7rem;
+  -o-border-radius: 0.7rem;
+  padding: 3rem;
+  font-size: 1.3rem;
+}
+.card:nth-of-type(1),
+.card:nth-of-type(2),
+.card:nth-of-type(4) {
+  color: #fff;
+}
+img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+h2 {
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.8rem;
+  color: #cfcfcf;
+}
+p {
+  color: #cfcfcf;
+}
+.card-1 {
+  background: #7541c8 !important;
+}
+.card-2 {
+  background: #48556a;
+}
+.card-3,
+.card-5 {
+  background: #fff;
+}
+.card-4 {
+  background: #19212e;
+}
+@media only screen and (min-width: 768px) {
+  main {
+    grid-template-areas:
+      "one two"
+      "three four"
+      "five five";
+  }
+  .card-1 {
+    grid-area: one;
+  }
+  .card-2 {
+    grid-area: two;
+  }
+  .card-3 {
+    grid-area: three;
+  }
+  .card-4 {
+    grid-area: four;
+  }
+  .card-5 {
+    grid-area: five;
+  }
+}
+@media only screen and (min-width: 960px) {
+  main {
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+  .card-1 {
+    grid-area: one;
+  }
+  .card-2 {
+    grid-area: two;
+  }
+  .card-3 {
+    grid-area: three;
+  }
+  .card-4 {
+    grid-area: four;
+  }
+  .card-5 {
+    grid-area: five;
+  }
+}
